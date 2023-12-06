@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Milu Jewelry</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    
+  </style>
+</head>
+<body>     
+
+  <ul class="menu">
+    <li><a href="inicio.html">Inicio</a></li>
+    <li><a href="productos.html">Productos</a></li>
+  </ul>
+
+  <h1>Productos</h1>
+  <br>
+  <center>
+  <button onclick="filtrarPorCategoria('anillos')">Anillos</button>
+  <button onclick="filtrarPorCategoria('aretes')">Aretes</button>
+  <button onclick="filtrarPorCategoria('collares')">Collares</button>
+  <button onclick="filtrarPorCategoria('pulseras')">Pulseras</button>
+</center>
+
+<div class="ventanaEmergente" style="display: none;">
+  <form>
+      <label for="titulo">Título:</label>
+      <input type="text" class="titulo">
+      <label for="contenido">Contenido:</label>
+      <textarea class="contenido"></textarea>
+      <button type="button" onclick="guardarCambios()">Guardar</button>
+  </form>
+</div>
+  
+
+<div class="contenedor-tarjetas" id="productos"></div>
+    <div class="producto-card" id="producto3">
+      <img class="producto-img" src="images/anillos1.png" alt="Anillos">
+      <h3>Trío anillos perlados</h3>
+      <p>Anillos sencillo con perla</p>
+      <p>Precio: $20000</p>
+      <button class="agregar">Agregar al carrito</button>
+      <button onclick="abrirEditor('producto3')">Editar Tarjeta</button>
+    </div>
+    
+  
+      <div class="producto-card" id="producto4">
+        <img class="producto-img" src="images/anillos2.png" alt="Anillos">
+        <h3>Anillo mariposas</h3>
+        <p>Anillo mariposas bañado en oro</p>
+        <p>Precio: $25000</p>
+        <button class="agregar">Agregar al carrito</button>
+        <button onclick="abrirEditor('producto4')">Editar Tarjeta</button>
+      </div>
+   
+        <div class="producto-card" id="producto5">
+          <img class="producto-img" src="images/anillos3.png" alt="Anillos">
+          <h3>Set anillos sencillos</h3>
+          <p>Set de anillos sencillos (Bañados en oro)</p>
+          <p>Precio: $40000</p>
+          <button class="agregar">Agregar al carrito</button>
+          <button onclick="abrirEditor('producto5')">Editar Tarjeta</button>
+        </div>
+     
+          <div class="producto-card" id="producto6">
+            <img class="producto-img" src="images/anillos4.png" alt="Anillos">
+            <h3>Kit anillos</h3>
+            <p>Kit de anillos bañados en oro</p>
+            <p>Precio: $40000</p>
+            <button class="agregar">Agregar al carrito</button>
+            <button onclick="abrirEditor('productp6')">Editar Tarjeta</button>
+          </div>
+          
+            <div class="producto-card" id="producto7">
+              <img class="producto-img" src="images/anillos5.png" alt="Anillos">
+              <h3>Anillo sencillo convinado</h3>
+              <p>Anillo sencillo con una convinación de perlas y una imitación de diamantes</p>
+              <p>Precio: $50000</p>
+              <button class="agregar">Agregar al carrito</button>
+              <button onclick="abrirEditor('producto7')">Editar Tarjeta</button>
+            </div>
+            
+              <div class="producto-card" id="producto8">
+                <img class="producto-img" src="images/anillos6.png" alt="Anillos">
+                <h3>Anillo sencillo corazón</h3>
+                <p>Anillo sencillo con un corazón en el centro bañado en oro</p>
+                <p>Precio: $35000</p>
+                <button class="agregar">Agregar al carrito</button>
+                <button onclick="abrirEditor('producto8')">Editar Tarjeta</button>
+              </div>
+            
+                <div class="producto-card" id="producto9">
+                  <img class="producto-img" src="images/anillos7.png" alt="Anillos">
+                  <h3>Anillo doble</h3>
+                  <p>Anillo doble con piedras preciosas</p>
+                  <p>Precio: $70000</p>
+                  <button class="agregar">Agregar al carrito</button>
+                  <button onclick="abrirEditor('producto9')">Editar Tarjeta</button>
+                </div>
+               
+                  <div class="producto-card" id="producto10">
+                    <img class="producto-img" src="images/anillos8.png" alt="Anillos">
+                    <h3>Kit anillos de piedras preciosas</h3>
+                    <p>Kit de anillos con piedras preciosas y diferentes formas</p>
+                    <p>Precio: $85000</p>
+                    <button class="agregar">Agregar al carrito</button>
+                    <button onclick="abrirEditor('producto10')">Editar Tarjeta</button>
+                  </div>
+                 
+                    <div class="producto-card" id="producto11">
+                      <img class="producto-img" src="images/aretes1.png" alt="Aretes">
+                      <h3>Kit aretes</h3>
+                      <p>Kit de aretes convinados</p>
+                      <p>Precio: $39000</p>
+                      <button class="agregar">Agregar al carrito</button>
+                      <button onclick="abrirEditor('producto11')">Editar Tarjeta</button>
+                    </div>
+                    
+                      <div class="producto-card" id="producto12">
+                        <img class="producto-img" src="images/aretes2.png" alt="Aretes">
+                        <h3>Candongas</h3>
+                        <p>Candogas sencillas trenzadas</p>
+                        <p>Precio: $50000</p>
+                        <button class="agregar">Agregar al carrito</button>
+                        <button onclick="abrirEditor('producto12')">Editar Tarjeta</button>
+                      </div>
+             
+                        <div class="producto-card" id="producto13">
+                          <img class="producto-img" src="images/aretes3.png" alt="Aretes">
+                          <h3>Aretes perlados</h3>
+                          <p>Aretes pelados con dibujo</p>
+                          <p>Precio: $55000</p>
+                          <button class="agregar">Agregar al carrito</button>
+                          <button onclick="abrirEditor('producto13')">Editar Tarjeta</button>
+                        </div>
+      
+                          <div class="producto-card" id="producto14">
+                            <img class="producto-img" src="images/aretes4.png" alt="Aretes">
+                            <h3>Aretes sencillos</h3>
+                            <p>Aretes sencillos con perla</p>
+                            <p>Precio: $40000</p>
+                            <button class="agregar">Agregar al carrito</button>
+                            <button onclick="abrirEditor('producto14')">Editar Tarjeta</button>
+                          </div>
+                      
+                            <div class="producto-card" id="producto15">
+                              <img class="producto-img" src="images/aretes5.png" alt="Aretes">
+                              <h3>Candongas</h3>
+                              <p>Candongas tres en una</p>
+                              <p>Precio: $25000</p>
+                              <button class="agregar">Agregar al carrito</button>
+                              <button onclick="abrirEditor('producto15')">Editar Tarjeta</button>
+                            </div>
+                           
+                              <div class="producto-card" id="producto16">
+                                <img class="producto-img" src="images/aretes6.png" alt="Aretes">
+                                <h3>Candongas</h3>
+                                <p>Candongas en forma de lágrima</p>
+                                <p>Precio: $25000</p>
+                                <button class="agregar">Agregar al carrito</button>
+                                <button onclick="abrirEditor('producto16')">Editar Tarjeta</button>
+                              </div>
+                             
+                                <div class="producto-card" id="producto18">
+                                  <img class="producto-img" src="images/aretes7.png" alt="Aretes">
+                                  <h3>Kit aretes</h3>
+                                  <p>Kit de aretes convinados de piedras preciosas</p>
+                                  <p>Precio: $35000</p>
+                                  <button class="agregar">Agregar al carrito</button>
+                                  <button onclick="abrirEditor('producto18')">Editar Tarjeta</button>
+                                </div>
+                               
+                                  <div class="producto-card" id="producto19">
+                                    <img class="producto-img" src="images/aretes8.png" alt="Aretes">
+                                    <h3>Aretes</h3>
+                                    <p>Aretes en forma de lágrima con piedras preciosas</p>
+                                    <p>Precio: $39000</p>
+                                    <button class="agregar">Agregar al carrito</button>
+                                    <button onclick="abrirEditor('producto19')">Editar Tarjeta</button>
+                                  </div>
+                                  
+                                    <div class="producto-card" id="producto20">
+                                      <img class="producto-img" src="images/collares1.png" alt="Collares">
+                                      <h3>Collar doble</h3>
+                                      <p>Collar doble de mariposa</p>
+                                      <p>Precio: $40000</p>
+                                      <button class="agregar">Agregar al carrito</button>
+                                      <button onclick="abrirEditor('producto20')">Editar Tarjeta</button>
+                                    </div>
+                                   
+                                      <div class="producto-card" id="producto21">
+                                        <img class="producto-img" src="images/collares2.png" alt="Collares">
+                                        <h3>Collar sencillo</h3>
+                                        <p>Collar sencillo de corazón con perla</p>
+                                        <p>Precio: $30000</p>
+                                        <button class="agregar">Agregar al carrito</button>
+                                        <button onclick="abrirEditor('producto22')">Editar Tarjeta</button>
+                                      </div>
+                                    
+                                        <div class="producto-card" id="producto22">
+                                          <img class="producto-img" src="images/collares3.png" alt="Collares">
+                                          <h3>Collar doble</h3>
+                                          <p>Collar doble de piedra roja en forma de corazón</p>
+                                          <p>Precio: $45000</p>
+                                          <button class="agregar">Agregar al carrito</button>
+                                          <button onclick="abrirEditor('producto22')">Editar Tarjeta</button>
+                                        </div>
+
+                                          <div class="producto-card" id="producto23">
+                                            <img class="producto-img" src="images/collares4.png" alt="Collares">
+                                            <h3>Cadena mariposa</h3>
+                                            <p>Cadena dorada con mariposa </p>
+                                            <p>Precio: $42000</p>
+                                            <button class="agregar">Agregar al carrito</button>
+                                            <button onclick="abrirEditor('producto23')">Editar Tarjeta</button>
+                                          </div>
+                                         
+                                            <div class="producto-card" id="producto24">
+                                              <img class="producto-img" src="images/collares5.png" alt="Collares">
+                                              <h3>Gargantilla mariposas</h3>
+                                              <p>Gargantilla plateada de piedras preciosas y mariposas </p>
+                                              <p>Precio: $70000</p>
+                                              <button class="agregar">Agregar al carrito</button>
+                                              <button onclick="abrirEditor('producto24')">Editar Tarjeta</button>
+                                            </div>
+                                            
+                                            
+                                              <div class="producto-card" id="producto25">
+                                                <img class="producto-img" src="images/collares6.png" alt="Collares">
+                                                <h3>Gargantilla</h3>
+                                                <p>Gargantilla sencilla brillante</p>
+                                                <p>Precio: $35000</p>
+                                                <button class="agregar">Agregar al carrito</button>
+                                                <button onclick="abrirEditor('producto25')">Editar Tarjeta</button>
+                                              </div>
+                                             
+                                                <div class="producto-card" id="producto26">
+                                                  <img class="producto-img" src="images/collares7.png" alt="Collares">
+                                                  <h3>Collar sencillo</h3>
+                                                  <p>Convinación de cadena con una lindas perlas </p>
+                                                  <p>Precio: $40000</p>
+                                                  <button class="agregar">Agregar al carrito</button>
+                                                  <button onclick="abrirEditor('producto26')">Editar Tarjeta</button>
+                                                </div>
+                                               
+                                                  <div class="producto-card" id="producto28">
+                                                    <img class="producto-img" src="images/collares8.png" alt="Collares">
+                                                    <h3>Collar convinado</h3>
+                                                    <p>Convinación de collares trenzado con mariposa, convinación cadena y perlas, sencillo con una perla </p>
+                                                    <p>Precio: $50000</p>
+                                                    <button class="agregar">Agregar al carrito</button>
+                                                    <button onclick="abrirEditor('producto28')">Editar Tarjeta</button>
+                                                  </div>
+                                                  
+                                                    <div class="producto-card" id="producto29">
+                                                      <img class="producto-img" src="images/pulseras1.png" alt="Pulseras">
+                                                      <h3>Dúo de pulseras</h3>
+                                                      <p>Dúo de lindas pulseras color negro y blanco </p>
+                                                      <p>Precio: $50000</p>
+                                                      <button class="agregar">Agregar al carrito</button>
+                                                      <button onclick="abrirEditor('producto29')">Editar Tarjeta</button>
+                                                    </div>
+                                                   
+                                                      <div class="producto-card" id="producto30">
+                                                        <img class="producto-img" src="images/pulseras2.png" alt="Pulseras">
+                                                        <h3>Dúo de pulseras</h3>
+                                                        <p>Dúo de lindas pulseras convinada y de perlas </p>
+                                                        <p>Precio: $50000</p>
+                                                        <button class="agregar">Agregar al carrito</button>
+                                                        <button onclick="abrirEditor('producto30')">Editar Tarjeta</button>
+                                                      </div>
+                                                      
+                                                      
+                                                        <div class="producto-card" id="producto31">
+                                                          <img class="producto-img" src="images/pulseras3.png" alt="Pulseras">
+                                                          <h3>Pulsera sencilla</h3>
+                                                          <p>Linda pulsera delicada con hermosa flor de pierdas preciosas </p>
+                                                          <p>Precio: $45000</p>
+                                                          <button class="agregar">Agregar al carrito</button>
+                                                          <button onclick="abrirEditor('producto31')">Editar Tarjeta</button>
+                                                        </div>
+                                                       
+                                                          <div class="producto-card" id="producto32">
+                                                            <img class="producto-img" src="images/pulseras4.png" alt="Pulseras">
+                                                            <h3>Pulsera delicada</h3>
+                                                            <p>Pulsera delicada con hermoso juego de seis piedras preciosas </p>
+                                                            <p>Precio: $70000</p>
+                                                            <button class="agregar">Agregar al carrito</button>
+                                                            <button onclick="abrirEditor('producto32')">Editar Tarjeta</button>
+                                                          </div>
+                                                          
+                                                            <div class="producto-card" id="producto33">
+                                                              <img class="producto-img" src="images/pulseras5.png" alt="Pulseras">
+                                                              <h3>Pulsera convinada</h3>
+                                                              <p>Linda pulsera convina con perlas</p>
+                                                              <p>Precio: $60000</p>
+                                                              <button class="agregar">Agregar al carrito</button>
+                                                              <button onclick="abrirEditor('producto33')">Editar Tarjeta</button>
+                                                            </div>
+                                                         
+                                                              <div class="producto-card" id="producto34">
+                                                                <img class="producto-img" src="images/pulseras6.png" alt="Pulseras">
+                                                                <h3>Kit de pulseras</h3>
+                                                                <p>Kit de pulseras en baño de oro convinadas trenzada y forma de cadena </p>
+                                                                <p>Precio: $55000</p>
+                                                                <button class="agregar">Agregar al carrito</button>
+                                                                <button onclick="abrirEditor('producto34')">Editar Tarjeta</button>
+                                                              </div>
+                                                              
+                                                              
+                                                                <div class="producto-card" id="producto2">
+                                                                  <img class="producto-img" src="images/pulseras7.png" alt="Pulseras">
+                                                                  <h3>Kit de pulseras</h3>
+                                                                  <p>Kit de lindas pulseras LV</p>
+                                                                  <p>Precio: $ 80000</p>
+                                                                  <button class="agregar">Agregar al carrito</button>
+                                                                  <button onclick="abrirEditor('producto2')">Editar Tarjeta</button>
+
+                                                                </div>
+                                                                
+                                                                  <div class="producto-card" id="producto1">
+                                                                    <img class="producto-img" src="images/pulseras8.png" alt="Pulseras">
+                                                                    <h3>Pulsera doble</h3>
+                                                                    <p>Linda pulsera doble muy delicada </p>
+                                                                    <p>Precio: $80000</p>
+                                                                    <button class="agregar">Agregar al carrito</button>
+                                                                    <button onclick="abrirEditor('producto1')">Editar Tarjeta</button>
+                                                            
+                                                                  </div>
+                                                                  
+
+                                                                  
+  <div id="carrito">
+    <img id="carrito-img" src="images/carrito-de-compras.png" alt="Carrito de compras">
+    
+    <div id="productos-en-carrito"></div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+<footer>
+  <center><p>© 2023 Ana Lucía Caro Cobo. Todos los derechos reservados.</p></center>
+</footer>
+</html>
+
